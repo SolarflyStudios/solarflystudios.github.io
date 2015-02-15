@@ -16,7 +16,7 @@ h2.subtitle {
     font-size: 32px;
 }
 div.titlewrapper {
-    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url("http://i58.tinypic.com/30xj3ag.png");
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),rgba(55,55,55,1);
     height: 300px;
     width: 100%;
     position: absolute;
@@ -27,7 +27,7 @@ div.titlewrapper {
 div.logosection {
     background-color: #252525;  
     position: absolute;
-    z-index: 2;
+    z-index: 4;
     margin-left: -8px;
     margin-top: 17em;
     width: 100%;
@@ -45,7 +45,7 @@ div.logosection img.logo {
 ul.nav {
     position: absolute;
     padding: 10px;
-    z-index: 1;
+    z-index: 3;
     width: 100px;
     margin-left: -8px;
     margin-top: 25em;
