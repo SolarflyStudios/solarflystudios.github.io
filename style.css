@@ -183,3 +183,8 @@ table.imgdisplay tr.desc {
     font-size: 12px;
     color: #bbb;
 }
+h3.note {
+    color: #ccc;
+    text-align: center;
+    font-size: 14px;
+}
