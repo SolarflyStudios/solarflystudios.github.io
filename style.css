@@ -42,19 +42,24 @@ div.logosection img.logo {
     display: block;
     margin: auto;
 }
-ul.nav {
+table.nav {
     position: absolute;
-    padding: 10px;
     z-index: 3;
-    width: 100px;
+    margin-top: 26.3em;
     margin-left: -8px;
-    margin-top: 25em;
+    width: 100%;
+    table-layout: fixed;
+    display: table;
+    border-collapse: collapse;
 }
-ul.nav li {
+table.nav tr {
+    width: 100%;
+}
+table.nav td {
     background-color: #2a2a2a;
     color: white;
+    font-family: "montserrat";
     padding: 25px;
     text-align: center;
-    list-style-type: none;
-    list-style: none;
+    display: table-cell;
 }
