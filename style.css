@@ -12,24 +12,33 @@ h1.title {
     font-size: 90px;
     margin: 0.55em 0 0 0;
 }
-h2.subtitle {
-    font-size: 32px;
+h2.title {
+    font-size: 20px;
+    width: 75%;
+    margin: auto;
 }
 div.titlewrapper {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);   
+}
+div.head {
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), rgba(55,55,55,1);
     background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),rgba(55,55,55,1);
     height: 300px;
-    width: 100%;
-    position: absolute;
+    width: 105%;
+    position: relative;
+    margin-top: -50px;
     margin-left: -8px;
-    margin-top: -8px;
     z-index: 1;
 }
 div.logosection {
     background-color: #252525;  
     position: absolute;
     z-index: 4;
-    margin-left: -8px;
-    margin-top: 17em;
+    top: 300px;
     width: 100%;
     height: 150px;
     box-shadow: 0 0 5px rgba(0,0,0,0.6);
@@ -38,6 +47,8 @@ div.logosection img.logo {
     width: 100px;   
     position: relative;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     display: block;
     margin: auto;
@@ -45,15 +56,14 @@ div.logosection img.logo {
 table.nav {
     position: absolute;
     z-index: 3;
-    margin-top: 26.3em;
-    margin-left: -8px;
+    top: 450px;
     width: 100%;
     table-layout: fixed;
     display: table;
     border-collapse: collapse;
 }
 table.nav tr {
-    width: 100%;
+    width: 100%;   
 }
 table.nav td {
     background-color: #2a2a2a;
@@ -62,4 +72,9 @@ table.nav td {
     padding: 25px;
     text-align: center;
     display: table-cell;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+table.nav td:hover {
+    background-color: #FE642E;   
 }
