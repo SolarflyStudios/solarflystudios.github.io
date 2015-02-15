@@ -1,5 +1,6 @@
 body {
     background-color: #FE642E;
+    margin: 0;
 }
 .title {
     color: #fff;
@@ -28,10 +29,9 @@ div.head {
     background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), rgba(55,55,55,1);
     background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),rgba(55,55,55,1);
     height: 300px;
-    width: 105%;
+    width: 100%;
     position: relative;
     margin-top: -50px;
-    margin-left: -8px;
     z-index: 1;
 }
 div.logosection {
@@ -62,19 +62,22 @@ table.nav {
     display: table;
     border-collapse: collapse;
 }
-table.nav tr {
-    width: 100%;   
-}
 table.nav td {
+    margin: 0;
+    padding: 0;
+}
+table.nav td a:hover {
+    background-color: #FE642E;   
+}
+table.nav td a {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 25px;
     background-color: #2a2a2a;
     color: white;
     font-family: "montserrat";
-    padding: 25px;
     text-align: center;
-    display: table-cell;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
-}
-table.nav td:hover {
-    background-color: #FE642E;   
+    display: block;
 }
