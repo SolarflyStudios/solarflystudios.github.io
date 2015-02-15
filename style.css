@@ -133,7 +133,7 @@ div.main {
 h2.header {
     color: #FE642E;
     text-align: center;
-    margin: 10px;
+    margin: 20px;
     font-size: 50px;
 }
 .header#l {
@@ -164,7 +164,22 @@ table.imgdisplay td {
     vertical-align: middle;
     text-align: center;
 }
-table.imgdisplay td.head {
+table.imgdisplay tr.head {
     font-size: 20px;
     color: #FE642E;
+}
+table.imgdisplay tr.img img {
+    width: 75%;
+    overflow: hidden;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+}
+table.imgdisplay tr.img img:hover {
+    -webkit-transform: scale(1.0f5,1.05);
+    -ms-transform: scale(1.05,1.05);
+    transform: scale(1.05,1.05);
+}
+table.imgdisplay tr.desc {
+    font-size: 12px;
+    color: #bbb;
 }
