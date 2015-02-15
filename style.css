@@ -22,7 +22,7 @@ body {
 }
 h1.title {
     font-size: 90px;
-    margin: 0.55em 0 0 0;
+    margin: auto;
 }
 h2.title {
     font-size: 20px;
@@ -39,33 +39,16 @@ div.titlewrapper {
 div.head {
     background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), rgba(55,55,55,1);
     background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),rgba(55,55,55,1);
-    height: 300px;
+    height: 400px;
     width: 100%;
     position: relative;
     margin-top: -50px;
     z-index: 1;
 }
-
-/*Logo bar*/
-
-div.logosection {
-    background-color: #252525;  
-    position: absolute;
-    z-index: 10;
-    top: 300px;
-    width: 100%;
-    height: 150px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.6);
-}
-div.logosection img {
+div.head img {
     width: 100px;   
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%); 
-    -ms-transform: translateY(-50%); 
-    transform: translateY(-50%);
     display: block;
-    margin: auto;
+    margin: 20px auto;
 }
 
 /*Navigation*/
@@ -73,12 +56,13 @@ div.logosection img {
 table.nav {
     position: absolute;
     z-index: 3;
-    top: 450px;
+    top: 340px;
     width: 100%;
     table-layout: fixed;
     display: table;
     border-collapse: collapse;
     z-index: 3;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
 }
 table.nav td {
     margin: 0;
@@ -109,7 +93,7 @@ table.nav td a.active {
 h1.pagetitle {
     position: absolute;
     font-size: 72px;
-    top: 530px;
+    top: 400px;
     color: #fff;
     text-align: center;
     font-weight: 700;
@@ -123,7 +107,7 @@ div.main {
     width: 100%;
     background-color: white;
     position: absolute;
-    top: 720px;
+    top: 580px;
     box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
     padding: 25px;
 }
