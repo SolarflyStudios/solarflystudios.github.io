@@ -45,9 +45,7 @@ body {
     height: 45px;
 }
 .nav td img {
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
-    transform: rotate3d(4,4,4)
     width: 32px;
     display: block;
     margin: auto;
@@ -64,7 +62,6 @@ body {
     -webkit-animation: spin 2s linear infinite;
     width: 40px;
 }
-.nav td:hover > .nav td
 
 @media (max-width: 640px) {
     .title p {
