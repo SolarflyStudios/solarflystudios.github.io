@@ -6,13 +6,14 @@ body {
     padding: 0;
     margin: 0;
     background-color: black;
-    background: url(Assets/Backgrounds/background.png) no-repeat center center fixed;
+    background: black url(Assets/Backgrounds/background.png) no-repeat center center fixed;
     background-size: cover;
+    color: white;
 }
 
 /*TITLE BAR*/
 
-.title h1, p {
+.title h1, .title p {
     margin: 0;
     color: #fff;
     width: 50%;
@@ -64,6 +65,73 @@ body {
     width: 40px;
 }
 
+/*PAGE CONTACT*/
+
+.section {
+    width: 80%;
+    background-color: white;
+    margin: 20px auto;
+}
+.section h1, .name h1 {
+    background-color: black;
+    text-transform: uppercase;
+    padding: 20px;
+    margin: 0;
+}
+.section h1 {
+    text-align: center;
+}
+.section p {
+    padding: 20px;
+    padding-top: 0;
+    color: #999;
+    margin: 0;
+}
+img.centered {
+    display: block;
+    margin: auto;
+    width: 80vmin
+}
+
+/*EXPANDER*/
+
+.expander {
+    height: 170px;
+}
+
+/*NAME TABLE - INDEX.HTML*/
+
+.name {
+    list-style: none;
+    padding: 0;
+    margin: auto;
+    width: 80%;
+}
+.name h1 {
+    font-size: 20px;
+    z-index: 50;
+}
+.name li {
+    display: inline-block;
+    background-color: white;
+    width: 49.55%;
+    margin-bottom: 5px;
+    height: 275px;
+    overflow: hidden;
+}
+.name li img {
+    display: block;
+    width: 170px;
+    margin: 20px;
+    float: left;
+}
+.name li p {
+    color: black;
+    padding: 10px;
+}
+
+/*PAGE SIZE MEDIA QUERY*/
+
 @media (max-width: 640px) {
     .title p {
         display: none;
@@ -73,5 +141,18 @@ body {
     }
     .nav td {
         width: 50px;    
+    }
+    .name li {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .name li p {
+        display: none;
+    }
+    .name li img {
+        margin: 20px auto;
+        float: none;
     }
 }
