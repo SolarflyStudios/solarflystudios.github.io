@@ -85,7 +85,6 @@ body {
     padding: 20px;
     padding-top: 0;
     color: #999;
-    margin: 0;
 }
 img.centered {
     display: block;
@@ -155,4 +154,20 @@ img.centered {
         margin: 20px auto;
         float: none;
     }
+}
+
+/*GAME PAGES*/
+
+h1 sm {
+    font-size: 15px;
+    margin: 0;
+}
+.no-margin {
+    margin: 0 auto;
+}
+#swfdiv {
+    width: 80%;
+    background: black;
+    padding: 16px;
+    margin: 0;
 }

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" type="image/ico" href="/favicon.ico"/>
+        <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+      <title>DECKED: SolarFly Studios</title>
+	  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="section no-margin"><h1>decked<br/><sm>Solarfly Studios' Entry for Ludum Dare 32.</sm></h1></div>
+    <center>
+      <div id="swfdiv" margin-top="100px" height="500px" width="660px" border-radius="5px" border-style="outset"></div>
+    </center>
+
+      <!-- Swf -->
+  <script>
+	function hash (s) { var sum = 0; for (c in s) { sum = sum ^ s.charCodeAt(c); } return sum; }
+	$(document).ready(function(){
+		$('#swfdiv').append('<iframe id="swf" width="640" height="480" src="Game Pages/Decked/DECKED.swf" frameborder="0" margin="10px"></iframe>');
+	});
+  </script>
+  </body>
+</html>
