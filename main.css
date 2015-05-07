@@ -90,7 +90,7 @@ body {
 }
 .section img.centered {
     display: block;
-    margin: 10px auto;
+    margin: auto;
     width: 50vmax;
 }
 
