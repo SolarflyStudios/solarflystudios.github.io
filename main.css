@@ -1,44 +1,53 @@
 * {
     font-family: "montserrat", sans-serif;
-    box-sizing: border-box;
-}
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+    }
+
 body {
     padding: 0;
     margin: 0;
     background: url(Assets/Backgrounds/background.png) black;
+    -webkit-background-size: cover;
     background-size: cover;
-    color: white;
-}
+    color: white
+    }
+
 .background {
-    perspective: 1px;
-}
+    perspective: 1px
+    }
+
 .background img {
     position: absolute;
     z-index: -1;
-    transform: translateZ(-1px) scale(2.4);
-}
+    -moz-transform: translatez(-1px) scale(2.4);
+    -ms-transform: translatez(-1px) scale(2.4);
+    -o-transform: translatez(-1px) scale(2.4);
+    -webkit-transform: translatez(-1px) scale(2.4);
+    transform: translatez(-1px) scale(2.4)
+    }
 
 /*TITLE BAR*/
-
 .title h1, .title p {
     margin: 0;
     color: #fff;
-    width: 50%;
-}
+    width: 50%
+    }
+
 .title h1 {
-    text-transform: uppercase;
-}
+    text-transform: uppercase
+    }
+
 .title {
     background: black;
     padding: 20px;
     width: 100%;
     position: fixed;
     bottom: 0;
-    z-index: 100;
-}
+    z-index: 100
+    }
 
 /*NAVIGATION*/
-
 .nav table {
     position: fixed;
     float: right;
@@ -46,75 +55,84 @@ body {
     bottom: 25px;
     border-collapse: collapse;
     color: white;
-    z-index: 100;
-}
+    z-index: 100
+    }
+
 .nav td {
     width: 60px;
-    height: 45px;
-}
+    height: 45px
+    }
+
 .nav td img {
-    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
     -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     width: 32px;
     display: block;
-    margin: auto;
-}
+    margin: auto
+    }
+
 .nav td img:hover {
-    width: 40px;
-}
+    width: 40px
+    }
+
 .nav td .active {
     width: 40px;
-    opacity: 0.5;
-}
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    opacity: 0.5
+    }
 
 /*PAGE CONTACT*/
-
 .section {
     width: 80%;
     background-color: white;
-    margin: 20px auto;
-}
+    margin: 20px auto
+    }
+
 .section h1, .name h1 {
     background-color: black;
     text-transform: uppercase;
     padding: 20px;
-    margin: 0;
-}
+    margin: 0
+    }
+
 .section h1 {
-    text-align: center;
-}
+    text-align: center
+    }
+
 .section p {
     color: #999;
-    padding: 20px;
-    
-}
+    padding: 20px
+    }
+
 .section img.centered {
     display: block;
     margin: auto;
-    width: 50vmax;
-}
+    width: 50vmax
+    }
 
 /*EXPANDER*/
-
 .expander {
-    height: 115px;
-}
+    height: 115px
+    }
 
 /*NAME TABLE - INDEX.HTML*/
-
 .name {
     list-style: none;
     padding: 0;
     margin: auto;
     width: 80%;
-    -webkit-transform-style: preserve-3d;
-}
+    }
+
 .name h1 {
     font-size: 20px;
     overflow: none;
     width: 100%;
-    z-index: 4;
-}
+    z-index: 4
+    }
+
 .name li {
     display: inline-block;
     background-color: white;
@@ -124,16 +142,18 @@ body {
     z-index: 0;
     perspective: 1px;
     cursor: default;
-    max-height: 250px;
-}
+    max-height: 250px
+    }
+
 .name img {
     display: block;
     margin: 20px auto;
     max-width: 275px;
     top: 30px;
     position: relative;
-    z-index: 1;
-}
+    z-index: 1
+    }
+
 .name p {
     color: black;
     width: 100%;
@@ -141,60 +161,53 @@ body {
     top: -100%;
     padding: 25px;
     background-color: white;
-    transform: translateZ(-1px) scale(2);
-    z-index: 3;
-    
-}
+    -moz-transform: translatez(-1px) scale(2);
+    -ms-transform: translatez(-1px) scale(2);
+    -o-transform: translatez(-1px) scale(2);
+    -webkit-transform: translatez(-1px) scale(2);
+    transform: translatez(-1px) scale(2);
+    z-index: 3
+    }
+
 .name p, .name h1 {
-    position: absolute;
-}
+    position: absolute
+    }
+
 .name img, .name h1, .name p {
-    transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
     -webkit-transition: all 0.4s;
-}
+    transition: all 0.4s
+    }
+
 .name li:hover > h1 {
-    transform: translateY(190px);
-    -webkit-transform: translateY(190px);
-    padding-right: 80vmin;
-}
+    -moz-transform: translatey(190px);
+    -ms-transform: translatey(190px);
+    -o-transform: translatey(190px);
+    -webkit-transform: translatey(190px);
+    transform: translatey(190px);
+    padding-right: 800px
+    }
+
 .name li:hover > p {
     top: 0;
-    height: 200px;
-}
+    height: 200px
+    }
 
 /*PAGE SIZE MEDIA QUERY*/
-
-
-@media (max-width: 690px) {
-    .title p {
-        display: none;
-    }
-    .nav table {
-        bottom: 35px;
-    }
-    .nav td {
-        width: 50px;    
-    }
-    .name li {
-        width: 100%;
-    }
-    .expander {
-        height: 140px;    
-    }
-}
-
 /*GAME PAGES*/
-
 h1 sm {
     font-size: 15px;
-    margin: 0;
-}
+    margin: 0
+    }
+
 .no-margin {
-    margin: 0 auto;
-}
+    margin: 0 auto
+    }
+
 #swfdiv {
     width: 80%;
     background: black;
     padding: 52px;
-    margin: 0;
-}
+    margin: 0
+    }
