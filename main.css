@@ -113,6 +113,7 @@ body {
     font-size: 20px;
     overflow: none;
     width: 100%;
+    z-index: 4;
 }
 .name li {
     display: inline-block;
@@ -131,7 +132,7 @@ body {
     max-width: 275px;
     top: 30px;
     position: relative;
-    z-index: 3;
+    z-index: 1;
 }
 .name p {
     color: black;
@@ -141,11 +142,11 @@ body {
     padding: 25px;
     background-color: white;
     transform: translateZ(-1px) scale(2);
+    z-index: 3;
     
 }
 .name p, .name h1 {
     position: absolute;
-    z-index: 4;
 }
 .name img, .name h1, .name p {
     transition: all 0.4s;
