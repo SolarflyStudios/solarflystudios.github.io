@@ -122,10 +122,10 @@ h1.sectiontitle {
 .section img.centered {
     display: block;
     margin: 20px auto 0 auto;
-    width: 50vw
+    width: 70vw
     }
 
-.section img p {
+.section img + p {
     margin-top: 0
     }
 
@@ -147,7 +147,7 @@ h1.sectiontitle {
     }
 
 .name h1 {
-    font-size: 1.4vw;
+    font-size: 18px;
     overflow: none;
     width: 105%;
     z-index: 4
