@@ -81,22 +81,22 @@ body {
     width: 40px;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     filter: alpha(opacity=50);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
     opacity: 0.5
     }
 
 /*UNIVERSAL ELEMENTS*/
-
 h1.sectiontitle {
     background-color: black;
     text-transform: uppercase;
     padding: 20px;
     margin: 10px auto;
     width: 80%;
-    text-align: center;
-}
+    text-align: center
+    }
 
 /*PAGE CONTACT*/
-
 .section {
     width: 80%;
     background-color: white;
@@ -122,27 +122,30 @@ h1.sectiontitle {
 .section img.centered {
     display: block;
     margin: 20px auto 0 auto;
-    width: 50vw;
+    width: 50vw
     }
-.section img + p {
-    margin-top: 0;
-}
+
+.section img p {
+    margin-top: 0
+    }
 
 /*EXPANDER*/
 .expander {
-    height: 20vh;
+    height: 20vh
     }
 
 /*NAME TABLE - INDEX.HTML*/
 .name {
     padding: 0;
     margin: auto;
-    width: 80%;
+    width: 80%
     }
+
 .name .list {
     position: relative;
-    left: 0.3vw;
-}
+    left: 0.3vw
+    }
+
 .name h1 {
     font-size: 1.4vw;
     overflow: none;
@@ -159,7 +162,7 @@ h1.sectiontitle {
     cursor: default;
     height: 190px;
     width: 32.8%;
-    margin-right: 0;
+    margin-right: 0
     }
 
 .name img {
@@ -169,7 +172,7 @@ h1.sectiontitle {
     position: relative;
     z-index: 1;
     margin: auto;
-    display: block;
+    display: block
     }
 
 .name p {
@@ -179,11 +182,11 @@ h1.sectiontitle {
     top: -100%;
     padding: 25px;
     background-color: white;
-    z-index: 2;
+    z-index: 2
     }
 
 .name p, .name h1 {
-    position: absolute;
+    position: absolute
     }
 
 .name img, .name h1, .name p {
@@ -195,11 +198,16 @@ h1.sectiontitle {
 
 .name .list div:hover > p {
     top: -20px;
-    height: 200px;
+    height: 200px
     }
+
 .name .list div:hover > h1 {
-    transform: translateY(-75px);
-}
+    -moz-transform: translatey(-75px);
+    -ms-transform: translatey(-75px);
+    -o-transform: translatey(-75px);
+    -webkit-transform: translatey(-75px);
+    transform: translatey(-75px)
+    }
 
 /*PAGE SIZE MEDIA QUERY*/
 
