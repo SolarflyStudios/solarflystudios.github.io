@@ -89,8 +89,8 @@ h1.sectiontitle {
     margin: 20px auto;
     padding-bottom: 20px;
     }
-.section.no_show {
-    padding; 0;
+.section#no-show {
+    padding: 0;
 }
 .section h1, .name h1 {
     background-color: black;
