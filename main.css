@@ -6,8 +6,8 @@
 
 body {
     padding: 0;
-    margin: 130px 0 20px 0;
-    background: linear-gradient(rgb(229, 79, 47),rgb(255, 128, 0)) fixed;
+    margin: 130px 0 0 0;
+    background: black linear-gradient(rgb(229, 79, 47),rgb(255, 128, 0)) fixed;
     color: white
     }
 
@@ -86,7 +86,8 @@ h1.sectiontitle {
 .section {
     width: 80%;
     background-color: white;
-    margin: 20px auto
+    margin: 20px auto;
+    padding-bottom: 20px;
     }
 
 .section h1, .name h1 {
@@ -100,18 +101,26 @@ h1.sectiontitle {
     color: black;
     background-color: white;
     padding; 0;
+    margin-top: 0;
     top: -30px;
 }
-.section h1, h2 {
+.section h2.normal {
+    top: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+.section h1, h2{
     text-align: center
     }
 
 .section p {
-    color: #999;
-    padding: 20px;
-    padding-top: 0;
-    }
-
+    color: #333;
+    padding: 0 20px;
+    margin-bottom: 0;
+}
+.section p.centered {
+    text-align: center;
+}
 .section img.centered {
     display: block;
     margin: 20px auto 0 auto;
@@ -119,7 +128,7 @@ h1.sectiontitle {
     }
 
 .section img + p {
-    margin-top: 0
+    margin-top: 0;
     }
 
 /*NAME TABLE - INDEX.HTML*/
@@ -128,7 +137,12 @@ h1.sectiontitle {
     margin: auto;
     width: 80%
     }
-
+.name a {
+    z-index: 300;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 .name .list {
     position: relative;
     left: 0.3vw
@@ -149,7 +163,6 @@ h1.sectiontitle {
     overflow: hidden;
     position: relative;
     z-index: 0;
-    cursor: default;
     height: 190px;
     width: 32.8%;
     margin-right: 0;
@@ -157,12 +170,12 @@ h1.sectiontitle {
     }
 
 .name img {
-    width: 80%;
+    width: 90%;
     bottom: 0;
     position: relative;
     z-index: -1;
     margin: auto;
-    display: block
+    display: block;
     }
 
 .name p {
@@ -285,14 +298,14 @@ h1.sectiontitle {
 /*CONTACT*/
 .links {
     position: relative;
-    table-layout: fixed;
     border-collapse: collapse;
-    width: 95%;
-    margin: auto;
-    margin-bottom: 5px;
+    width: 90%;
+    margin: 20px auto 0 auto;
+    table-layout: fixed;
 }
 .links a {
-    display: table-cell;
+    width: 100%;
+    display: block;
     background: black;
     color: white;
     text-decoration: none;
@@ -302,6 +315,16 @@ h1.sectiontitle {
 }
 .links a:hover {
     background-color: rgb(229,79,47);
+}
+
+/*FOOTER*/
+
+footer {
+    padding: 5px;
+    padding-left: 15px;
+    font-size: 12px;
+    margin-top: 20px;
+    background: black;
 }
 
 /*GAME PAGES*/
