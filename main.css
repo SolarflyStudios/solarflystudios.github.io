@@ -6,25 +6,9 @@
 
 body {
     padding: 0;
-    margin: 0;
-    background: url(Assets/Backgrounds/background.png) black;
-    -webkit-background-size: cover;
-    background-size: cover;
+    margin: 130px 0 20px 0;
+    background: linear-gradient(rgb(229, 79, 47),rgb(255, 128, 0)) fixed;
     color: white
-    }
-
-.background {
-    perspective: 1px
-    }
-
-.background img {
-    position: absolute;
-    z-index: -1;
-    -moz-transform: translatez(-1px) scale(2.4);
-    -ms-transform: translatez(-1px) scale(2.4);
-    -o-transform: translatez(-1px) scale(2.4);
-    -webkit-transform: translatez(-1px) scale(2.4);
-    transform: translatez(-1px) scale(2.4)
     }
 
 /*TITLE BAR*/
@@ -40,10 +24,10 @@ body {
 
 .title {
     background: black;
+    top: 0;
     padding: 20px;
     width: 100%;
     position: fixed;
-    bottom: 0;
     z-index: 100
     }
 
@@ -52,32 +36,28 @@ body {
     position: fixed;
     float: right;
     right: 20px;
-    bottom: 25px;
+    top: 25px;
     border-collapse: collapse;
     color: white;
     z-index: 100
     }
-
 .nav td {
     width: 60px;
-    height: 45px
+    height: 45px;
+    border-left: rgba(0,0,0,0) solid 10px;
     }
 
-.nav td img {
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    width: 32px;
-    display: block;
-    margin: auto
+.nav td a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s color
     }
-
-.nav td img:hover {
-    width: 40px
-    }
-
-.nav td .active {
+.nav td a:hover {
+    color: rgb(229, 79, 47);
+}
+.nav td a.active {
+    color: white;
+    cursor: default;
     width: 40px;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     filter: alpha(opacity=50);
@@ -85,6 +65,12 @@ body {
     filter: alpha(opacity=50);
     opacity: 0.5
     }
+.nav h2 {
+    position: fixed;
+    font-size: 15px;
+    top: 500px;
+    z-index: 7;
+}
 
 /*UNIVERSAL ELEMENTS*/
 h1.sectiontitle {
@@ -109,14 +95,20 @@ h1.sectiontitle {
     padding: 20px;
     margin: 0
     }
-
-.section h1 {
+.section h2 {
+    position: relative;
+    color: black;
+    background-color: white;
+    top: 15px;
+}
+.section h1, h2 {
     text-align: center
     }
 
 .section p {
     color: #999;
-    padding: 20px
+    padding: 20px;
+    padding-top: 0;
     }
 
 .section img.centered {
@@ -127,11 +119,6 @@ h1.sectiontitle {
 
 .section img + p {
     margin-top: 0
-    }
-
-/*EXPANDER*/
-.expander {
-    height: 20vh
     }
 
 /*NAME TABLE - INDEX.HTML*/
@@ -147,9 +134,11 @@ h1.sectiontitle {
     }
 
 .name h1 {
-    font-size: 18px;
+    bottom: 0;
+    font-size: 15px;
     overflow: none;
-    width: 105%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
     z-index: 4
     }
 
@@ -162,15 +151,15 @@ h1.sectiontitle {
     cursor: default;
     height: 190px;
     width: 32.8%;
-    margin-right: 0
+    margin-right: 0;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.4);
     }
 
 .name img {
-    width: 20vw;
-    left: 10vh;
-    top: 5vmin;
+    width: 80%;
+    bottom: 0;
     position: relative;
-    z-index: 1;
+    z-index: -1;
     margin: auto;
     display: block
     }
@@ -178,65 +167,125 @@ h1.sectiontitle {
 .name p {
     color: black;
     width: 100%;
-    height: 80px;
-    top: -100%;
+    height: 110%;
+    top: -120%;
     padding: 25px;
-    background-color: white;
-    z-index: 2
-    }
+    background-color: rgba(255,255,255,0.97);
+    z-index: 3
+}
 
 .name p, .name h1 {
     position: absolute
-    }
+}
+.name p, .name div, .name h1 {
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+}
 
-.name img, .name h1, .name p {
-    -moz-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s
-    }
-
+.name .list div:hover {
+    box-shadow: 0 4px 25px rgba(0,0,0,0.4);
+}
 .name .list div:hover > p {
     top: -20px;
-    height: 200px
     }
-
 .name .list div:hover > h1 {
-    -moz-transform: translatey(-75px);
-    -ms-transform: translatey(-75px);
-    -o-transform: translatey(-75px);
-    -webkit-transform: translatey(-75px);
-    transform: translatey(-75px)
-    }
+    padding: 5px 20px;
+}
 
 /*PAGE SIZE MEDIA QUERY*/
 
-@media (max-width: 690px) {
+@media screen and (max-width: 690px) {
     .title p {
         display: none;
     }
     .nav table {
-        bottom: 35px;
+        margin-bottom: -4px;
     }
     .nav td {
         width: 50px;    
+        display: block;
+        width: 100px;
+        height: 25px;
+        text-align: center;
     }
     .name img {
         left: 0;
-        width: 250px;
+        width: 150px;
     }
     .name .list {
         left:0;    
     }
     .name .list div {
-        width: 100%;
+        width: 49%;
+    }
+    body {
+        margin-top: 140px;    
     }
 }
 
+/*PROJECTS*/
+
+.game {
+    margin: auto;
+    margin-bottom: 25px;
+    height: 300px;
+    background-color: white;
+    position: relative;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.4);
+    transition: 0.3s box-shadow;
+    overflow: hidden;
+    width: 65%;
+}
+.game.time {
+    background: white url(Assets/Logos/Time4You/time4you2.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.game.deck {
+    background: white url(Assets/Logos/DECKED/decked2.png) center center;
+    background-size: cover;
+}
+.game .desc {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+    padding: 5px;
+    padding-bottom: 0px;
+    z-index: 5;
+}
+.game .desc h1 {
+    text-align: left;
+    margin-top: 6px;
+    font-size: 25px;
+    padding: 0 10px;
+    background: none;
+}
+.game .desc p {
+    color: white;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+    position: relative;
+    font-size: 15px;
+    overflow: hidden;
+    height: 75%;
+}
+.game:hover {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+.game a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+}
+
 /*GAME PAGES*/
+
 h1 sm {
     font-size: 15px;
-    margin: 0
+    margin-top: -10px;
     }
 
 .no-margin {
@@ -245,7 +294,9 @@ h1 sm {
 
 #swfdiv {
     width: 80%;
+    height: 600px;
     background: black;
-    padding: 52px;
-    margin: 0
+    margin: auto;
     }
+iframe {
+}
